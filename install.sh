@@ -23,10 +23,15 @@ fi
 
 # Check for npm
 if ! command -v npm &> /dev/null; then
-       
-  echo "npm (Node Package Manager) not found. It's usually installed with Node.js."
-  echo "However, if you need to install it separately, refer to your package manager's documentation."
+  echo "npm not found. Installing..."
+  sudo apt install npm
+  if [ $? -ne 0 ]; then
+    echo "Failed to install npm. Exiting..."
+    exit 1
+  fi
 fi
+
+
 
 # Everything installed (or potential npm issue mentioned)
 echo "You have Node.js and Git installed. Click on 'turn_on_server' to start the server."
