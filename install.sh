@@ -21,8 +21,14 @@ if ! command -v git &> /dev/null; then
   fi
 fi
 
-# Everything installed
-echo "You have everying installed now click on turn_on_server to start"
+# Check for npm
+if ! command -v npm &> /dev/null; then
+  echo "npm (Node Package Manager) not found. It's usually installed with Node.js."
+  echo "However, if you need to install it separately, refer to your package manager's documentation."
+fi
+
+# Everything installed (or potential npm issue mentioned)
+echo "You have Node.js and Git installed. Click on 'turn_on_server' to start the server."
 sleep 5s
 
 echo "Script finished."
