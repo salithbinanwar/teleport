@@ -22,7 +22,7 @@ Execute the provided installation script to set up the necessary dependencies fo
 ```
 ./install.sh
 ```
-##3 Start the Teleport server:
+## 3 Start the Teleport server:
 Run the `turn_on_server.sh` script to launch the Teleport server:
 
 ```
